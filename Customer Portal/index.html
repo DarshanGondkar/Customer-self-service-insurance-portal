@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insurance Self-Service Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container nav-container">
+      <h1 class="logo">Insurance Portal</h1>
+      <ul class="nav-links">
+        <li><a href="#file-claim">File a Claim</a></li>
+        <li><a href="#track-claims">Track Claims</a></li>
+        <li><a href="#knowledge-base">Knowledge Base</a></li>
+        <li><a href="#chatbot">Chatbot</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Claim Submission Form -->
+    <section id="file-claim">
+      <h2>Submit a New Insurance Claim</h2>
+      <form id="claimForm">
+        <div class="form-group">
+          <label for="policy-number">Policy Number:</label>
+          <input type="text" id="policy-number" required>
+        </div>
+        <div class="form-group">
+          <label for="incident-date">Incident Date:</label>
+          <input type="date" id="incident-date" required>
+        </div>
+        <div class="form-group">
+          <label for="incident-description">Incident Description:</label>
+          <textarea id="incident-description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="file-upload">Attach Files:</label>
+          <input type="file" id="file-upload" multiple>
+        </div>
+        <button type="submit" class="btn">Submit Claim</button>
+        <div id="form-feedback"></div>
+      </form>
+    </section>
+
+    <!-- Claim Tracking Table -->
+    <section id="track-claims">
+      <h2>Track Your Claims</h2>
+      <table id="claimsTable">
+        <thead>
+          <tr>
+            <th>Claim Number</th>
+            <th>Status</th>
+            <th>Date Submitted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Claims will be dynamically rendered here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Knowledge Base Search -->
+    <section id="knowledge-base">
+      <h2>Search Knowledge Base</h2>
+      <input type="text" id="search-input" placeholder="Search FAQs">
+      <div id="search-results"></div>
+    </section>
+
+    <!-- Chatbot Integration -->
+    <section id="chatbot">
+      <h2>Chatbot Assistance</h2>
+      <div id="chat-container">
+        <!-- Dialogflow chatbot integration -->
+        <iframe
+          allow="microphone;"
+          width="350"
+          height="500"
+   src="https://console.dialogflow.com/api-client/demo/embedded/1f5e7d44-e91d-4d9e-8186-477afafcdb6d">      
+   </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Insurance Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
